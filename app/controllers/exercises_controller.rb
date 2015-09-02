@@ -6,10 +6,12 @@ class ExercisesController < ApplicationController
 
   # Display form to create a new exercise
   def create
+    @exercise = Exercise.new(exercise_params)
   end
 
   # Create the new exercise
   def new
+    @exercise = Exercise.new
   end
 
   # Display a form to edit an exercise
@@ -31,6 +33,12 @@ class ExercisesController < ApplicationController
   private
   # Strong params
   def exercise_params
+    params.require(:exercise).permit(:name, :equipment)
+  end
+
+  # Find an exercise
+  def set_assignment
+    @exercise = Exercise.find(params[:id])
   end
 
 end
