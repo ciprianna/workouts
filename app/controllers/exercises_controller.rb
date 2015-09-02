@@ -8,7 +8,11 @@ class ExercisesController < ApplicationController
   def create
     @exercise = Exercise.new(exercise_params)
 
-    redirect_to '/exercises'
+    if @exercise.save
+      redirect_to '/exercises'
+    else
+      render :new
+    end
   end
 
   # Create the new exercise
