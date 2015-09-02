@@ -7,6 +7,8 @@ class ExercisesController < ApplicationController
   # Display form to create a new exercise
   def create
     @exercise = Exercise.new(exercise_params)
+
+    redirect_to '/exercises'
   end
 
   # Create the new exercise
