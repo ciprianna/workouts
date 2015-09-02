@@ -28,4 +28,9 @@ class ExercisesController < ApplicationController
   def delete
   end
 
+  private
+  # Strong params
+  def exercise_params
+  end
+
 end

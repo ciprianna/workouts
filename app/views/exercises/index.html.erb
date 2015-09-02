@@ -1,0 +1,5 @@
+<h1>Exercise Inventory</h1>
+
+<% Exercise.all.each do |exercise| %>
+  <a href='<%= exercise_path %>'><h2><%= exercise.name %></h2></a>
+<% end %>
