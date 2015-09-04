@@ -1,4 +1,5 @@
 class ExercisesController < ApplicationController
+  before_action :set_exercise, only: [:show, :edit, :update, :destroy]
 
   # Exercise homepage - evaluate if needed
   def index
@@ -43,7 +44,7 @@ class ExercisesController < ApplicationController
   end
 
   # Find an exercise
-  def set_assignment
+  def set_exercise
     @exercise = Exercise.find(params[:id])
   end
 
