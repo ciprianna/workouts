@@ -40,7 +40,7 @@ class ExercisesController < ApplicationController
   private
   # Strong params
   def exercise_params
-    params.require(:exercise).permit(:name, :equipment)
+    params.require(:exercise).permit(:name, :equipment, :muscle_group_id)
   end
 
   # Find an exercise
