@@ -11,18 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150910201245) do
+ActiveRecord::Schema.define(version: 20150910201439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "exercises", force: :cascade do |t|
-    t.string "name"
-    t.string "equipment"
+    t.string  "name"
+    t.string  "equipment"
+    t.integer "muscle_group_id"
   end
+
+  add_index "exercises", ["muscle_group_id"], name: "index_exercises_on_muscle_group_id", using: :btree
 
   create_table "muscle_groups", force: :cascade do |t|
     t.string "name"
   end
 
+  add_foreign_key "exercises", "muscle_groups"
 end
