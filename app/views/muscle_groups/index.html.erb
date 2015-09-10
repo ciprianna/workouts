@@ -1,0 +1,5 @@
+<h1>Muscle Groups</h1>
+
+<% MuscleGroup.all.each do |group| %>
+  <a href='<%= muscle_group_path(group.id) %>'><h2><%= group.name %></h2></a>
+<% end %>
