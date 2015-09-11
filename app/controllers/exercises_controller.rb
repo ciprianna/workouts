@@ -31,7 +31,12 @@ class ExercisesController < ApplicationController
 
   # Update an exercise (save)
   def update
-    @exercise.update(exercise_params)
+
+    if @exercise.update(exercise_params)
+      redirect_to '/exercises'
+    else
+      render :edit
+    end
   end
 
   # Delete an exercise
