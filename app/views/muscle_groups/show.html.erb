@@ -2,7 +2,7 @@
 
 <% @muscle_group.exercises.each do |exercise| %>
 <p>
-  <a href="<%= exercise.id %>"><%= exercise.name %></a>
+  <a href="<%= exercise_path(exercise.id) %>"><%= exercise.name %></a>
 </p>
 <% end %>
 
