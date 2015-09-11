@@ -1,4 +1,5 @@
 class MuscleGroupsController < ApplicationController
+  before_action :set_muscle_group, only: [:show, :edit, :update, :destroy]
 
   # Index homepage - evaluate if needed
   def index
