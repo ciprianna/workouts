@@ -1,0 +1,8 @@
+<h1><%= @muscle_group.name %></h1>
+
+<% @muscle_group.exercises.each do |exercise| %>
+<p>
+  <a href="<%= exercise.id %>"><%= exercise.name %></a>
+</p>
+
+<%= link_to 'Back', muscle_groups_path %>
