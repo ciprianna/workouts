@@ -31,6 +31,7 @@ class ExercisesController < ApplicationController
 
   # Update an exercise (save)
   def update
+    @exercise.update(exercise_params)
   end
 
   # Delete an exercise
