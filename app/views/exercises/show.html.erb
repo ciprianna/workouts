@@ -1,6 +1,7 @@
 <h1><%= @exercise.name %></h1>
 
 <p>Equipment - <%= @exercise.equipment %></p>
+<p>Muscle Group - <a href="<%= muscle_groups_path(@exercise.muscle_group.id) %>"><%= @exercise.muscle_group.name %></a></p>
 
 <%= link_to 'Back', exercises_path %>
 <%= link_to 'Edit', edit_exercise_path %>
