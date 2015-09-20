@@ -40,7 +40,9 @@ class ExercisesController < ApplicationController
   end
 
   # Delete an exercise
-  def delete
+  def destroy
+    @exercise.destroy
+    redirect_to '/exercises'
   end
 
   private

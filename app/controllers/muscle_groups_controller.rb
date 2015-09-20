@@ -39,7 +39,7 @@ class MuscleGroupsController < ApplicationController
   end
 
   # Delete a muscle group
-  def delete
+  def destroy
   end
 
   private
