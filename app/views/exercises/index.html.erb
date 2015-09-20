@@ -3,3 +3,5 @@
 <% Exercise.all.each do |exercise| %>
   <a href='<%= exercise_path(exercise.id) %>'><h2><%= exercise.name %></h2></a>
 <% end %>
+
+<%= link_to 'Add New Exercise', new_exercise_path %>
