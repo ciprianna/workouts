@@ -31,6 +31,11 @@ class MuscleGroupsController < ApplicationController
 
   # Update a muscle group (save)
   def update
+    if @muscle_group.update(muscle_group_params)
+      redirect_to '/muscle_groups'
+    else
+      render :edit
+    end
   end
 
   # Delete a muscle group
